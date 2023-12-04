@@ -56,7 +56,9 @@ export const Form = () => {
   });
 
   const onSubmit = (data) => {
-    window.open(WELCOME_URL);
+    if (!Boolean(errors.email)) {
+      window.open(WELCOME_URL);
+    }
   };
 
   return (
